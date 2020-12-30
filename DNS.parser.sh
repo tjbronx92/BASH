@@ -8,7 +8,7 @@ read ip_txt
 ip_list = $(grep '\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b' $ip_txt)
 echo $ip_list
 
-#parse ip_list for last 3 octets, pipe to echo
+#parse ip_list for last 3 octets, grep file
 	for ip in $ip_list
 	last_octet = $(grep '/([0-9]+)$/') 
 	grep $last_octet $db_file
